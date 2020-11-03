@@ -166,9 +166,9 @@ function ConvertHexColorToRGBFloat(hexColor)
     }
 
     return {
-        r: ((n & 0xFF0000) >> 0x10) / 255,
-        g: ((n & 0x00FF00) >> 0x08) / 255,
-        b: ((n & 0x0000FF))         / 255
+        r: ((n & 0xFF0000) >> 0x10) / 0xFF,
+        g: ((n & 0x00FF00) >> 0x08) / 0xFF,
+        b: ((n & 0x0000FF))         / 0xFF
     }
 }
 
