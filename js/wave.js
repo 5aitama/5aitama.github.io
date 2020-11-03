@@ -17,6 +17,8 @@ var noiseSeed       = 2304
 var noiseFrequency  = 0.1
 var noiseAmplitude  = 1
 
+var lineSegments;
+
 $(document).ready(() => {
 
     const body = $($('section')[0]);
@@ -96,7 +98,9 @@ function CreateWireFrameGrid(width, height, offset, scene, lineColor, lineWidth)
     const vertices    = [];
     const indices     = [];
 
-    for(var i = 0; i < width * height; i++)
+    const pointAmount = width * height;
+
+    for(var i = 0; i < pointAmount; i++)
     {
         const x = Math.floor(i % width);
         const y = 0;
@@ -132,8 +136,55 @@ function CreateWireFrameGrid(width, height, offset, scene, lineColor, lineWidth)
         linewidth: lineWidth,
     });
     
-    const line = new THREE.LineSegments( wireframe, material );
-    scene.add(line);
+    lineSegments = new THREE.LineSegments( wireframe, material );
+
+    scene.add(lineSegments);
 
     return wireframe;
+}
+
+/**
+ * Convert an hexadecimal color representation to
+ * 3 float component (r, g, b)
+ * @param {number | string} hexColor Hexadecimal color representation
+ * @returns { {r: number, g: number, b: number} } RGB color representation
+ */
+function ConvertHexColorToRGBFloat(hexColor)
+{
+    let n;
+
+    if(isNaN(hexColor))
+    {
+        if(hexColor.charAt(0) === '#')
+            n = parseInt(hexColor.replace("#", "0x"));
+        else
+            throw `Not recognize format of "${hexColor}"`;
+    }
+    else
+    {
+        n = hexColor;
+    }
+
+    return {
+        r: ((n & 0xFF0000) >> 0x10) / 255,
+        g: ((n & 0x00FF00) >> 0x08) / 255,
+        b: ((n & 0x0000FF))         / 255
+    }
+}
+
+/**
+ * Change the color of the line segments
+ * @param {string | {r: number, g: number, b: number}} rgb RGB (0..1) values.
+ */
+function ChangeLineSegmentsColor(rgb)
+{
+    lineSegments.material.color = isNaN(rgb) ? ConvertHexColorToRGBFloat(rgb) : rgb;
+}
+
+/**
+ * Reset the color of the line segments to the original color.
+ */
+function ResetLineSegmentsColor()
+{
+    lineSegments.material.color = ConvertHexColorToRGBFloat(lineColor);
 }
