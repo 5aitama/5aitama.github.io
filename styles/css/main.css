@@ -1,10 +1,10 @@
 @font-face {
   font-family: GlaciaIndifference;
-  src: url("./../../Font/GlacialIndifference-Regular.ttf") format("truetype"), url("./../../Font/GlacialIndifference-Regular.woff") format("woff"), url("./../../Font/GlacialIndifference-Bold.ttf") format("truetype"), url("./../../Font/GlacialIndifference-Bold.woff") format("woff");
+  src: url("/../../Font/GlacialIndifference-Regular.ttf") format("truetype"), url("/../../Font/GlacialIndifference-Regular.woff") format("woff"), url("/../../Font/GlacialIndifference-Bold.ttf") format("truetype"), url("/../../Font/GlacialIndifference-Bold.woff") format("woff");
 }
 @font-face {
   font-family: GlaciaIndifference-Bold;
-  src: url("./../../Font/GlacialIndifference-Bold.woff") format("woff");
+  src: url("/../../Font/GlacialIndifference-Bold.woff") format("woff");
 }
 * {
   font-family: GlaciaIndifference;
