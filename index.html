@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5aitama サイタマ</title>
     <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="icon" type="image/png" href="img/icon.png"
 </head>
 <body>
 
@@ -26,8 +27,8 @@
         <h3>Hi 👋</h3>
         <p>my name is Alexis Gougaut I'm a C# | Unity developper. I have passion for coding, creative coding, beauty, procedural things & video games. I also love science and new tech. I was born in Tamatave, Madagascar and currently 23 of my age. I currently live in Caen, France. I graduated at <a href="https://42.fr">42 School</a> in Paris where I discovred my passion for problem solving and creative coding. I am currently working at home on personal projects. If you want to get started with your project or you need developper, feel free to contact me.</p>
         <div class="buttons">
-            <button>Download my resume</button>
-            <button light>View my works</button>
+            <a href="cv/cv.pdf" target="_blank">View my resume</a>
+            <a light href="https://github.com/5aitama" target="_blank">View my works</a>
         </div>
     </section>
 
@@ -36,17 +37,17 @@
             <h1>Contact me!</h1>
             <p>Do you fancy saying hi to me or you want to get started with your project and you need my help, or wathever ? feel free to contact me</p>
             
-            <form>
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-                <textarea placeholder="message" style="resize: none;"></textarea>
+            <form id="input" onsubmit="onSubmit()" method="post">
+                <input id="iname" type="text" placeholder="name" required>
+                <input id="imail" type="email" placeholder="email" required>
+                <textarea id="imessage" placeholder="message" style="resize: none;"></textarea>
                 <input type="submit" value="Send me">
             </form>
 
             <ul>
-                <li class="twitter">@5aitama</li>
-                <li class="mail">alx.sb@icloud.com</li>
-                <li class="phone">+33 06 31 80 82 27</li>
+                <li id="twitter">@5aitama</li>
+                <li id="mail">alx.sb@icloud.com</li>
+                <li id="phone">+33 06 31 80 82 27</li>
             </ul>
         </div>
     </section>
@@ -70,7 +71,6 @@
     <script src="./noisejs/perlin.js"></script>
 
     <script src="./js/wave.js"></script>
-
     <script src="./js/index.js"></script>
 </body>
 </html>

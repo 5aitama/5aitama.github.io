@@ -1,6 +1,19 @@
 const twitterLink = 'https://twitter.com/5aitama1'
 const githubLink = 'https://github.com/5aitama';
 
+function onSubmit() {
+    const name = document.querySelector("#iname").value;
+    const mail = document.querySelector("#imail").value;
+    const message = document.querySelector("#imessage").value;
+
+    const form = document.querySelector("#input");
+
+    const subject = encodeURIComponent(`Contact`);
+    const body = encodeURIComponent(`${message}\n\n${name} (${mail})\n\n`);
+    
+    form.setAttribute('action', `mailto:alx.sb@icloud.com?subject=${subject}&body=${body}`);
+}
+
 $(document).ready(() => {
     
     const menuItems = $('.menu ul li');
@@ -19,7 +32,6 @@ $(document).ready(() => {
         let index = i;
         item.click(function() {
             $('html, body').animate( { scrollTop: $(sections[index]).offset().top }, 1000, 'easeInOutExpo')
-            // $(document).scrollTop($(sections[index]).offset().top);
         })
     }
 
@@ -30,9 +42,6 @@ $(document).ready(() => {
 function MenuHighlight(menuItems, sections, lastOffsetY)
 {
     const offsetY = $(document).scrollTop() + $(window).innerHeight() / 2;
-
-    // The direction of scroll
-    // const dir = (lastOffsetY - offsetY) == 0 ? 0 : (lastOffsetY - offsetY) <= -1 ? -1 : 1;
 
     lastOffsetY = offsetY;
 

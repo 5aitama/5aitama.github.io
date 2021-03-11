@@ -124,7 +124,7 @@ canvas {
   margin-top: 40px;
 }
 
-button {
+button, .buttons a {
   border-radius: 0;
   -webkit-appearance: none;
   border: none;
@@ -138,12 +138,25 @@ button {
   margin-right: 20px;
   font-weight: normal;
   cursor: pointer;
+
+  transition: border-color 0.5s, color 0.5s, background-color 0.5s;
 }
 
-button[light] {
+a[light] {
   background-color: #f7f7f7;
   color: #1a1a1a;
   font-weight: bold;
+}
+
+a:hover {
+  border-color: red;
+  color: red;
+}
+
+.buttons a:not([light]):hover{
+  background-color: red;
+  border-color: red;
+  color: white;
 }
 
 a {
@@ -189,28 +202,28 @@ ul li {
   list-style: none;
   margin: 0 10px;
 }
-ul li.twitter {
+ul li#twitter {
   background-image: url("../../socials/Twitter-Mark-Light-120px-plus.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 25px;
   display: block;
 }
-ul li.github {
+ul li#github {
   background-image: url("../../socials/GitHub-Mark-Light-120px-plus.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 25px;
   display: block;
 }
-ul li.phone {
+ul li#phone {
   background-image: url("../../socials/Phone.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding-left: 25px;
   display: block;
 }
-ul li.mail {
+ul li#mail {
   background-image: url("../../socials/Mail.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -282,8 +295,9 @@ ul li.mail {
     justify-content: center;
     margin: 40px;
   }
-  .buttons button {
+  .buttons button, .buttons a {
     margin: 10px 0;
+    text-align: center;
   }
 
   ul {
