@@ -2,6 +2,12 @@
     /** The profile picture url. */
     export let profile: string;
 
+    export let position: {
+        name: string;
+        link: string;
+        currently_working: boolean;
+    };
+
     let img: HTMLImageElement;
     let opacity = 1.0;
     let scale = 1.0;
@@ -25,7 +31,8 @@
             <h1>Developper</h1>
             <div class="subtitle">
                 <p>
-                    Currently working at <a href="#1">NXP</a>
+                    {position.currently_working ? "Currently" : "Previously"} working
+                    at <a href={position.link}>{position.name}</a>
                 </p>
                 <p>(2021 – PRESENT)</p>
             </div>
