@@ -1,5 +1,5 @@
 <script lang="ts">
-    import FocusedContainer from "./focusedContainer.svelte";
+    import FocusedContainer from "./FocusedContainer.svelte";
     let bias = 190;
 </script>
 
@@ -18,7 +18,6 @@
     </FocusedContainer>
 
     <img src="IMG_4593.jpeg" alt="" />
-    <div></div>
 </main>
 
 <style>
@@ -40,12 +39,8 @@
             height: 700px;
             border-radius: 48px;
             /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); */
-            border: 1px solid white;
+            /* border: 1px solid white; */
             margin-top: 80px;
         }
-    }
-
-    div {
-        height: 800px;
     }
 </style>
