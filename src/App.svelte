@@ -1,7 +1,7 @@
 <script lang="ts">
-    import About from "./lib/about.svelte";
-    import Hero from "./lib/hero.svelte";
-    import Navbar from "./lib/navbar.svelte";
+    import About from "./lib/About.svelte";
+    import Hero from "./lib/Hero.svelte";
+    import Navbar from "./lib/Navbar.svelte";
 
     let position = {
         name: "NXP Semiconductors",
