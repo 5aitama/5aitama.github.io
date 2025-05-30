@@ -32,7 +32,8 @@
             <div class="subtitle">
                 <p>
                     {position.currently_working ? "Currently" : "Previously"} working
-                    at <a href={position.link}>{position.name}</a>
+                    at
+                    <a target="_blank" href={position.link}>{position.name}</a>
                 </p>
                 <p>(2021 – PRESENT)</p>
             </div>
