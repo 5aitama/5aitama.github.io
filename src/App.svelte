@@ -4,8 +4,8 @@
     import Navbar from "./lib/navbar.svelte";
 
     let position = {
-        name: "NXP",
-        link: "#",
+        name: "NXP Semiconductors",
+        link: "https://www.nxp.com",
         currently_working: true,
     };
 </script>
