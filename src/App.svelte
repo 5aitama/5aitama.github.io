@@ -2,6 +2,7 @@
     import About from "./lib/About.svelte";
     import Hero from "./lib/Hero.svelte";
     import Navbar from "./lib/Navbar.svelte";
+    import SoftSkills from "./lib/SoftSkills.svelte";
 
     let position = {
         name: "NXP Semiconductors",
@@ -14,6 +15,7 @@
     <Navbar name="Alexis Gougaut" mail="alx.sb@icloud.com" />
     <Hero profile="profil.jpeg" {position} />
     <About />
+    <SoftSkills />
 </main>
 
 <style>
