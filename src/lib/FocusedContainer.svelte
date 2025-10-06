@@ -1,38 +1,56 @@
 <script lang="ts">
     import { onMount } from "svelte";
-
-    let element: HTMLElement;
-    let focused = true;
-    export let bias = 100;
-
-    onMount(() => onScroll());
-
-    function onScroll() {
-        const bounds = element.getBoundingClientRect();
-        const y = innerHeight / 2 - bounds.y - bounds.height / 2;
-        focused = y <= bias && y >= -bias;
-    }
 </script>
 
-<main class:focused bind:this={element}>
+<main>
     <slot />
 </main>
 
-<svelte:window onscroll={onScroll} />
-
 <style>
     main {
-        transition:
-            transform 600ms,
-            color 600ms;
+        view-timeline-name: --self;
+        view-timeline-axis: block;
+        animation-timeline: --self;
+        animation-name: fadeCenter;
+        animation-duration: 2s;
+        animation-fill-mode: both;
     }
 
-    main:not(.focused) {
-        color: #e0e0e0;
-        transform: translateY(40px) scale(0.95);
+    @keyframes fadeCenter {
+        0%,
+        30% {
+            color: #e0e0e0;
+            transform: translateY(40px) scale(0.95);
+        }
+        40%,
+        60% {
+            color: black;
+            transform: translateY(0) scale(1);
+        }
+        70%,
+        100% {
+            color: #e0e0e0;
+            transform: translateY(40px) scale(0.95);
+        }
     }
 
-    main.focused {
-        transform: translateY(0) scale(1);
+    @media only screen and (max-width: 600px) {
+        @keyframes fadeCenter {
+            0%,
+            20% {
+                color: #e0e0e0;
+                transform: translateY(40px) scale(0.95);
+            }
+            40%,
+            60% {
+                color: black;
+                transform: translateY(0) scale(1);
+            }
+            80%,
+            100% {
+                color: #e0e0e0;
+                transform: translateY(40px) scale(0.95);
+            }
+        }
     }
 </style>

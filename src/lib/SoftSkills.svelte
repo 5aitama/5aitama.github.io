@@ -5,36 +5,34 @@
             <div class="container">
                 <h2>Driven by Exploration</h2>
                 <p>
-                    I thrive on exploring new systems, diving into unfamiliar
-                    code, and expanding my understanding — whether close to the
-                    hardware or in high-level Rust architecture.
+                    Curious and passionate, I’ve always developed my skills
+                    through exploration — whether in code or through
+                    collaboration with my team.
                 </p>
             </div>
 
             <div class="container">
-                <h2>Lifelong Curiosity</h2>
+                <h2>Apes Together Strong</h2>
                 <p>
-                    Driven by an endless thirst to understand, I dive deep into
-                    unfamiliar systems, languages, and patterns — not just to
-                    know more, but to build better.
+                    I believe great projects are built together — I thrive in
+                    collaborative environments where ideas are shared,
+                    challenged, and refined as a team.
                 </p>
             </div>
 
             <div class="container">
-                <h2>Blues in Mind</h2>
+                <h2>Continuous Learner</h2>
                 <p>
-                    Like a Hendrix solo, I let intuition lead — coding in Rust
-                    becomes a way to feel, explore, and express, where each line
-                    hums with intention and soul.
+                    Technology evolves fast, and I thrive by staying curious,
+                    experimenting, and continuously refining my knowledge.
                 </p>
             </div>
 
             <div class="container">
-                <h2>Lorem ipsum</h2>
+                <h2>Integrity in Craft</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                    fugiat fuga, error enim maxime similique magni praesentium
-                    dignissimos natus inventore ipsam perferendis.
+                    Every line of code I write has meaning — no "vibe coding."
+                    Clean, purposeful, and maintainable solutions matter most.
                 </p>
             </div>
         </div>
@@ -48,6 +46,8 @@
         align-items: center;
 
         padding: 80px;
+
+        background: rgb(250, 250, 250);
 
         .soft-skills {
             max-width: 900px;
@@ -73,6 +73,35 @@
                         font-size: 1.25rem;
                         color: #6d6d6d;
                         line-height: 1.63rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        main {
+            padding: 30px;
+            .soft-skills {
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                .grid {
+                    grid-gap: 32px;
+                    grid-template-columns: repeat(2, minmax(100px, 1fr));
+                    grid-template-rows: repeat(2, min-content);
+
+                    .container {
+                        h2 {
+                            font-size: 1rem;
+                        }
+
+                        p {
+                            font-size: 0.75rem;
+                            line-height: 1rem;
+                            text-align: left;
+                        }
                     }
                 }
             }
