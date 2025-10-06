@@ -1,7 +1,4 @@
 <script lang="ts">
-    /** The profile picture url. */
-    export let profile: string;
-
     export let position: {
         name: string;
         link: string;
@@ -222,7 +219,7 @@
             border-radius: 30px;
             background: #e0e0e0;
 
-            background-image: url("profil.jpg");
+            background-image: url("/profil.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

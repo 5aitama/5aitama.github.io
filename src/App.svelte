@@ -14,7 +14,7 @@
 
 <main>
     <Navbar name="Alexis Gougaut" mail="alx.sb@icloud.com" />
-    <Hero profile="profil.jpg" {position} />
+    <Hero {position} />
     <About />
     <SoftSkills />
     <Experiences />
