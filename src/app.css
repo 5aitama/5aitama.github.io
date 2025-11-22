@@ -29,7 +29,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: #efefef;
+    background-color: var(--bg-color);
 }
 
 #app {
