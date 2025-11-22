@@ -47,7 +47,7 @@
 
         padding: 80px;
 
-        background: rgb(250, 250, 250);
+        background: var(--bg-color-secondary);
 
         .soft-skills {
             max-width: 900px;
@@ -71,7 +71,7 @@
                     p {
                         font-weight: 500;
                         font-size: 1.25rem;
-                        color: #6d6d6d;
+                        color: var(--text-color-secondary);
                         line-height: 1.63rem;
                     }
                 }
