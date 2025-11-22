@@ -14,8 +14,8 @@
     let cardHover = false;
 
     function onScroll() {
-        const m0 = card.getBoundingClientRect().height / 2.0 + 160.0;
-        const m1 = card.getBoundingClientRect().height * 2.0 + 160.0;
+        const m0 = card.getBoundingClientRect().height / 2.0 + 250.0;
+        const m1 = card.getBoundingClientRect().height * 2.0 + 250.0;
 
         const v0 = Math.max(0.0, card.clientTop + m0 - scrollY) / m0;
         const v1 = Math.max(0.0, card.clientTop + m1 - scrollY) / m1;
@@ -120,6 +120,8 @@
 <style>
     main {
         width: 100%;
+        background-color: var(--bg-color);
+        color: var(--text-color);
     }
     a {
         position: relative;
@@ -134,7 +136,7 @@
         content: "";
         width: 100%;
         height: 2px;
-        background: black;
+        background: var(--text-color);
         border-radius: 4px;
 
         transition: bottom 0.1s;
@@ -231,6 +233,8 @@
             transition-property: transform, box-shadow;
             transition-timing-function: ease-out;
             transform: scale3d(1, 1, 1);
+
+            z-index: 1;
 
             overflow: hidden;
 
