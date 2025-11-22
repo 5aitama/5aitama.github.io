@@ -11,6 +11,14 @@
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
+
+    --bg-color: #efefef;
+    --bg-color-secondary: #e0e0e0;
+
+    --text-color: #000000;
+    --text-color-secondary: rgb(90, 90, 90);
+
+    --btn-bg-color: #ffffff;
 }
 
 html,
@@ -30,4 +38,13 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1f1f1f;
+        --bg-color-secondary: #282828;
+
+        --text-color: #c3c3c3;
+        --text-color-secondary: #bfbfbf;
+
+        --btn-bg-color: #353535;
+    }
 }

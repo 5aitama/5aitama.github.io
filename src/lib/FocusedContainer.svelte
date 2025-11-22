@@ -19,17 +19,17 @@
     @keyframes fadeCenter {
         0%,
         30% {
-            color: #e0e0e0;
+            color: var(--bg-color-secondary);
             transform: translateY(40px) scale(0.95);
         }
         40%,
         60% {
-            color: black;
+            color: var(--text-color);
             transform: translateY(0) scale(1);
         }
         70%,
         100% {
-            color: #e0e0e0;
+            color: var(--bg-color-secondary);
             transform: translateY(40px) scale(0.95);
         }
     }
@@ -38,17 +38,17 @@
         @keyframes fadeCenter {
             0%,
             20% {
-                color: #e0e0e0;
+                color: var(--bg-color-secondary);
                 transform: translateY(40px) scale(0.95);
             }
             40%,
             60% {
-                color: black;
+                color: var(--text-color);
                 transform: translateY(0) scale(1);
             }
             80%,
             100% {
-                color: #e0e0e0;
+                color: var(--bg-color-secondary);
                 transform: translateY(40px) scale(0.95);
             }
         }

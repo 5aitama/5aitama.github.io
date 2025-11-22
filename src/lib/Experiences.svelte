@@ -71,23 +71,14 @@
         box-sizing: border-box;
         align-items: center;
 
+        background: var(--bg-color);
+        color: var(--text-color);
+
         h1.title {
             font-size: 4.5rem;
             margin: 10rem 0;
             position: relative;
         }
-
-        /*h1.title:after {
-            bottom: -15px;
-            left: 0;
-            position: absolute;
-            content: "";
-            display: block;
-            height: 10px;
-            width: 100%;
-            background: black;
-            border-radius: 3px;
-        }*/
     }
 
     .exp {
@@ -126,7 +117,7 @@
             font-size: 1.2rem;
             line-height: 1.63rem;
             font-weight: 500;
-            color: rgb(90, 90, 90);
+            color: var(--text-color-secondary);
             text-align: justify;
             max-width: 800px;
         }
@@ -136,7 +127,7 @@
             position: relative;
             text-decoration: none;
             font-weight: 600;
-            color: black;
+            color: var(--text-color-secondary);
         }
 
         a:before {
@@ -145,7 +136,7 @@
             position: absolute;
             content: "";
             display: block;
-            background: black;
+            background: var(--text-color-secondary);
             width: 100%;
             height: 2px;
             border-radius: 3px;

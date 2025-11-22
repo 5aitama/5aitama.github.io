@@ -26,5 +26,6 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        background-color: var(--bg-color);
     }
 </style>

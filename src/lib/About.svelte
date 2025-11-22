@@ -27,18 +27,20 @@
         align-items: center;
         padding: 40px;
         padding-top: 160px;
+        background: var(--bg-color);
 
         h1 {
             font-size: 4rem;
             max-width: 950px;
             text-align: center;
             margin: 100px 0;
+            /*color: var(--text-color);*/
         }
 
         .img-container {
             position: absolute;
             bottom: 0;
-            background: rgb(250, 250, 250);
+            background: var(--bg-color-secondary);
             height: 390px;
             width: 100%;
         }

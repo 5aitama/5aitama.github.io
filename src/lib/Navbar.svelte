@@ -66,6 +66,8 @@
         justify-content: center;
         box-sizing: border-box;
         padding: 20px 80px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
 
         .content {
             width: 100%;
@@ -110,7 +112,7 @@
 
                     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
                     text-transform: none;
-                    background: white;
+                    background: var(--btn-bg-color);
 
                     p {
                         font-size: 1rem;
